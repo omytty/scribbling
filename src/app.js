@@ -25,7 +25,7 @@
         this.data = new Object();
         this.clients = [];
         this.numericals = getNumericalValue();
-        this.socket = new WebSocket('ws://localhost:8765');
+        this.socket = new WebSocket('ws://47.90.96.63:9090');
         this.state = {
             on: false
         };

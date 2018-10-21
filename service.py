@@ -16,7 +16,7 @@ async def hello(websocket, path):
         connected.remove(websocket)
 
 if __name__ == '__main__':
-    start_server = websockets.serve(hello, 'localhost', 8765)
+    start_server = websockets.serve(hello, '0.0.0.0', 9090)
     loop = asyncio.get_event_loop()
     loop.run_until_complete(start_server)
     loop.run_forever()
