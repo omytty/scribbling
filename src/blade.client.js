@@ -24,6 +24,7 @@
 
     bladeClient.prototype.listenTouch = function() {
         this.canvas.ontouchstart = (touchEvent) => {
+            touchEvent.preventDefault();
             var touch = touchEvent.changedTouches.item(0);
             this.state.isTouching = true;
             this.state.lastPosition = {
@@ -41,6 +42,7 @@
      * @param {TouchEvent} touchEvent
      */
     bladeClient.prototype.randomPixelPoint = function(touchEvent) {
+        touchEvent.preventDefault();
         var touch = touchEvent.changedTouches.item(0);
         var lastPosition = this.state.lastPosition;
         this.state.x = touch.pageX;
