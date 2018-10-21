@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fruit</title>
+    <style>
+        * {margin: 0;padding: 0;}
+        body, #game {position: fixed;top:0;left:0;height:100%;width:100%;}
+        .clear {position: fixed;z-index:99999;top: 0;left:0;}
+        .clear button {width:50px;height:25px;background: rgb(32, 92, 219);color:white;border:1px solid black;}
+    </style>
+</head>
+<body>
+    <div class="clear">
+        <button id="clear-button" type="button">清屏</button>
+    </div>
+    <div id="app">
+        <!-- load canvas here -->
+    </div>
+</body>
+<script src="./src/app.js"></script>
+<script src="./src/layer.js"></script>
+<!-- <script src="./src/loader.js"></script> -->
+
+<script src="./src/blade.client.js"></script>
+<script src="./src/recv.client.js"></script>
+
+<script src="./src/functions.js"></script>
+
+<script>
+    alert('请用使用手机，或打开浏览器的手机模式！');
+    window.app = new App(document.getElementById('app'));
+
+    // var imageLoader = new ImageLoader({
+    //     'apple': './store/images/apple.png',
+    //     'apple-1': './store/images/apple-1.png',
+    //     'background': './store/images/background.jpg',
+    //     'boom': './store/images/boom.png',
+    //     'developing': './store/images/developing.png',
+    //     'flash': './store/images/flash.png',
+    //     'game-over': './store/images/game-over.png',
+    // });
+    // imageLoader.load().then(images => {
+    //     app.set('images', images);
+    //     prepareRecvLayer();
+    //     prepareBaseLayer();
+    // });
+    prepareRecvLayer();
+    prepareBaseLayer();
+
+    app.start();
+</script>
+</html>
