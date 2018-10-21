@@ -1,2 +1,2 @@
-# fruit
-The fruit html5 game
+# scribbling
+The scribbling html5 game
